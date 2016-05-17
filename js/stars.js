@@ -23,7 +23,7 @@ starObj.prototype.init = function() {
 
 // 画星星
 starObj.prototype.draw = function() {
-	ctx.drawImage(starPic, 7 * this.picNo, 0, 7, 7, this.x, this.y, 7, 7);
+	ctx.drawImage(starPic, star_size * this.picNo, 0, star_size, star_size, this.x, this.y, star_size, star_size);
 }
 
 // 更新序列

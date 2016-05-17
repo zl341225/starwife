@@ -13,6 +13,7 @@ var girl_y = 0;
 var girl_width = 1000;
 var girl_height = 667;
 
+var star_size = 14;
 var stars = [];
 var num = 120;
 
