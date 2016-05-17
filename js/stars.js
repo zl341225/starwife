@@ -38,16 +38,16 @@ starObj.prototype.update = function() {
 		if(this.picNo == 0) {
 			switch(this.direction) {
 				case 0:
-					this.y -= 2;
+					this.y -= 5;
 					break;
 				case 1:
-					this.x += 2;
+					this.x += 5;
 					break;
 				case 2:
-					this.y += 2;
+					this.y += 5;
 					break;
 				case 3:
-					this.x -= 2;
+					this.x -= 5;
 					break;
 			}
 
