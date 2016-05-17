@@ -13,7 +13,7 @@ var girl_y = 0;
 var girl_width = 1000;
 var girl_height = 667;
 
-var star_size = 28;
+var star_size = 14;
 var stars = [];
 var num = 60;
 
@@ -28,7 +28,7 @@ function init() {
 	h = can.height;
 
 	girlPic.src = "src/wife.jpg";
-	starPic.src = "src/star4.png";
+	starPic.src = "src/star.png";
 
 	for (var i = 0; i < num; i++) {
 		var obj = new starObj();
