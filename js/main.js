@@ -15,7 +15,7 @@ var girl_height = 667;
 
 var star_size = 28;
 var stars = [];
-var num = 120;
+var num = 60;
 
 var lastTime;
 var deltaTime;
