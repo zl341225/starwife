@@ -7,9 +7,6 @@ var starObj = function() {
 	this.timer;
 
 	this.direction;
-
-	this.xSped;
-	this.ySped;
 }
 
 // 初始化
@@ -21,9 +18,7 @@ starObj.prototype.init = function() {
 
 	this.timer = 0;
 
-	this.xSped = Math.random() * 5 - 2.5;
-	this.ySped = Math.random() * 5 - 2.5;
-
+	this.direction = Math.floor(Math.random() * 4);
 }
 
 // 画星星
@@ -33,20 +28,37 @@ starObj.prototype.draw = function() {
 
 // 更新序列
 starObj.prototype.update = function() {
-	this.x += this.xSped * deltaTime * 0.004;
-	this.y += this.ySped * deltaTime * 0.004;
-
-	if ((this.x < girl_x) || (this.x > girl_x + girl_width) ||
-		(this.y < girl_y) || (this.y > girl_y + girl_height)) {
-		this.init();
-	}
-
 	this.timer += deltaTime;
 	if (this.timer > 50) {
 		this.timer = 0;
 
 		this.picNo ++;
 		this.picNo %= 7;
+		
+		if(this.picNo == 0) {
+			switch(this.direction) {
+				case 0:
+					this.y -= 5;
+					break;
+				case 1:
+					this.x += 5;
+					break;
+				case 2:
+					this.y += 5;
+					break;
+				case 3:
+					this.x -= 5;
+					break;
+			}
+
+			if ((this.x < girl_x) || (this.x > girl_x + girl_width) ||
+				(this.y < girl_y) || (this.y > girl_y + girl_height)) {
+				this.x = Math.random() * girl_width + girl_x;
+				this.y = Math.random() * girl_height + girl_y;
+				this.direction = Math.floor(Math.random() * 4);
+				this.picNo = 0;
+			}
+		}
 	}	
 }
 
