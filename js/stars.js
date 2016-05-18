@@ -33,8 +33,8 @@ starObj.prototype.draw = function() {
 
 // 更新序列
 starObj.prototype.update = function() {
-	this.x += this.xSped * deltaTime * 0.004;
-	this.y += this.ySped * deltaTime * 0.004;
+	this.x += this.xSped * deltaTime * 0.01;
+	this.y += this.ySped * deltaTime * 0.01;
 
 	if ((this.x < girl_x) || (this.x > girl_x + girl_width) ||
 		(this.y < girl_y) || (this.y > girl_y + girl_height)) {
